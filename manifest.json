@@ -1,0 +1,31 @@
+{
+    "name": "My UW-Project",
+    "version": "1.0.0",
+    "description": "Merging course select with Rate My Prof and hopefully MadGrades",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://enroll.wisc.edu/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://enroll.wisc.edu/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          
+        ],
+        "matches": ["https://enroll.wisc.edu/*"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+      },
+      "default_title": "PROJECT",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+  }
