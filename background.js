@@ -2,11 +2,11 @@
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (tab.url && tab.url.includes('enroll.wisc.edu')) {
         console.log('Clicked on Tab! ' + tab.url);
-
-        if (changeInfo.status === 'complete'){
-            chrome.tabs.sendMessage(tabId, {
-                message: 'NEW'
-            });
-        }
+        
+        chrome.tabs.sendMessage(tabId, {
+            message: 'NEW'
+        });
+        console.log("Message sent!");
+    
     }
 });
