@@ -1,10 +1,7 @@
     const courseSelected = () => {
         //Getting the course title
         var courseTitle = document.getElementsByClassName("course-title")[0];
-        if (courseTitle) {
-            courseTitle = courseTitle.innerHTML;
-            console.log(courseTitle);
-        }
+        if (courseTitle) { courseTitle = courseTitle.innerHTML; }
         //Madgrades 
 
 
