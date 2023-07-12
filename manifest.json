@@ -1,7 +1,7 @@
 {
-    "name": "My UW-Project",
+    "name": "Course Search Helper",
     "version": "1.0.0",
-    "description": "Merging course select with Rate My Prof and hopefully MadGrades",
+    "description": "Providing Madgrades and RateMyProfessor data on UW-Madison's Course Search",
     "permissions": ["storage", "tabs"],
     "host_permissions": ["https://enroll.wisc.edu/*"],
     "background": {
