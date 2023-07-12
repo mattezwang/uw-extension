@@ -2,8 +2,7 @@
         //Getting the course title
         var courseTitle = document.getElementsByClassName("course-title")[0];
         if (courseTitle) { courseTitle = courseTitle.innerHTML; }
-        //Madgrades 
-
+        //Madgrades API 
 
         //Getting the professors
 
