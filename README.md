@@ -3,9 +3,6 @@ This is a Google Extension WIP; When completed, it should utilize Madgrades and 
 
 TODO: 
 
-FIGURE OUT THE ISSUE WHERE THE CONTENT ONLY UPDATES WHEN YOU ACCIDENTALLY BACK OUT OF THE PAGE
-manually update whenever click? will look into this
-
 PROFESSOR THING, FIND OUT HOW TO GET PROFESSOR
 
 CONNECT TO API
