@@ -22,7 +22,7 @@ for (let i = 0; i < buttons.length; i++) {
 
             // WHEN YOU BACK OUT OF THE PAGE, IT OUTPUTS THE FETCHED DATA TWICE
             //Madgrades API 
-            fetch("https://api.madgrades.com/v1/courses?" + new URLSearchParams({ query: courseTitle }).toString, {
+            fetch("https://api.madgrades.com/v1/courses?" + new URLSearchParams({ query: courseTitle }).toString(), {
                 method: 'GET',
                 headers: {
                     'Authorization' : "Token token=6cd3473136464c3d854e2f7c5372807c",
