@@ -2,7 +2,7 @@
     "name": "Course Search Helper",
     "version": "1.0.0",
     "description": "Providing Madgrades and RateMyProfessor data on UW-Madison's Course Search",
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage", "tabs", "declarativeContent"],
     "host_permissions": ["https://enroll.wisc.edu/*"],
     "background": {
         "service_worker": "background.js"

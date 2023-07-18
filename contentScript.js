@@ -31,7 +31,7 @@ for (let i = 0; i < buttons.length; i++) {
         }
 
         //Getting the professors
-
+            
         //Rate My Professor
     }
     
