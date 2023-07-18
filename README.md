@@ -7,3 +7,5 @@ FIGURE OUT THE ISSUE WHERE THE CONTENT ONLY UPDATES WHEN YOU ACCIDENTALLY BACK O
 manually update whenever click? will look into this
 
 PROFESSOR THING, FIND OUT HOW TO GET PROFESSOR
+
+DOM needs to change when the page is the same
