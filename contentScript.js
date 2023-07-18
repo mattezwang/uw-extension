@@ -1,12 +1,14 @@
 var buttons = document.getElementsByClassName("ng-star-inserted");
+var instructors = document.getElementsByClassName("instructor ng-star-inserted");
 var prevCourseNum = null;
+var counter = 0;
 
 for (let i = 0; i < buttons.length; i++) {
 
 // CAN ADD IF STATEMENT FOR IF THE USER IS PRESSING THE BACK BUTTON
 // ENAHNCE / OPTIMAIZE THIS FOR LOOP
 
-    buttons[i].addEventListener("click", () => { courseSelected(); });
+    buttons[i].addEventListener("click", () => { courseSelected(); professorRating();});
     
 }
 
@@ -17,6 +19,7 @@ for (let i = 0; i < buttons.length; i++) {
             var courseTitle = document.getElementsByClassName("course-title")[0];
             if (courseTitle) { courseTitle = courseTitle.innerHTML; 
             console.log(courseTitle);}
+            counter = 0;
             prevCourseNum = courseNum;
 
 
@@ -33,6 +36,12 @@ for (let i = 0; i < buttons.length; i++) {
         //Getting the professors
             
         //Rate My Professor
+    }
+
+    const professorRating = () => {
+        for (let element of instructors) {
+            if (counter < instructors.length){element.innerHTML = element.innerHTML + "<p>Hi...</p>"; counter++;}
+        }
     }
     
     // chrome.runtime.onMessage.addListener((obj, sender, response) => {
