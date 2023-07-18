@@ -5,4 +5,4 @@ TODO:
 
 PROFESSOR THING, FIND OUT HOW TO GET PROFESSOR
 
-needs to change some things
+DOM needs to change when the page is the same
