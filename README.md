@@ -4,6 +4,3 @@ This is a Google Extension WIP; When completed, it should utilize Madgrades and 
 TODO: 
 
 PROFESSOR THING, FIND OUT HOW TO GET PROFESSOR
-
-CONNECT TO API
-
