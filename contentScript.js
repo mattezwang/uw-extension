@@ -1,5 +1,6 @@
 var buttons = document.getElementsByClassName("ng-star-inserted");
 var instructors = document.getElementsByClassName("instructor ng-star-inserted");
+var instructorPage = document.getElementsByClassName("ng-tns-c164-1 ng-star-inserted");
 var prevCourseNum = null;
 var counter = 0;
 
@@ -40,6 +41,7 @@ for (let i = 0; i < buttons.length; i++) {
 
     const professorRating = () => {
         for (let element of instructors) {
+            console.log(counter + " counter");
             if (counter < instructors.length){element.innerHTML = element.innerHTML + "<p>Hi...</p>"; counter++;}
         }
     }
