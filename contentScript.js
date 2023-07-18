@@ -45,7 +45,7 @@ for (let i = 0; i < buttons.length; i++) {
     const professorRating = () => {
         for (let element of instructors) {
             console.log(counter + " counter");
-            if (counter < instructors.length){element.innerHTML = element.innerHTML + "<p>Hi...</p>"; counter++;}
+            if (counter < instructors.length){alert(element.innerHTML.match(/> (.*?) </gi)); element.innerHTML = element.innerHTML + "<p>Hi...</p>"; counter++;}
         }
     }
     
