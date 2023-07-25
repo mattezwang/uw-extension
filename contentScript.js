@@ -20,7 +20,7 @@ for (let i = 0; i < buttons.length; i++) {
             //Getting the course title
             var courseTitle = document.getElementsByClassName("course-title")[0];
             var catalogRef = document.getElementsByClassName("catalog-ref")[0];
-            var url;
+            var url = "";
             if (courseTitle) { courseTitle = courseTitle.innerHTML; }
             if (catalogRef) { catalogRef = catalogRef.innerHTML; }
             var search = courseTitle + " " + catalogRef;
@@ -35,7 +35,9 @@ for (let i = 0; i < buttons.length; i++) {
                 headers: {
                     'Authorization' : "Token token=6cd3473136464c3d854e2f7c5372807c",
                 }
-            }).then(response => response.json()).then(json => console.log(json))
+            }).then(response => response.json()).then(json =>  url = json.results[0].uuid)
+
+            console.log(url);
         }
 
         //Getting the professors
@@ -46,7 +48,7 @@ for (let i = 0; i < buttons.length; i++) {
     const professorRating = () => {
         for (let element of instructors) {
             console.log(counter + " counter");
-            if (counter < instructors.length){element.innerHTML = element.innerHTML + "<p>Hi...</p>"; counter++;}
+            if (counter < instructors.length){alert(element.innerHTML.match(/> (.*?) </gi)); element.innerHTML = element.innerHTML + "<p style=\"background-color: #6bcc5c; border: 5px solid #a7fc9a; border-radius: 10px; color: #c6f5d3; max-width: 50px; padding: 7px 10px; text-align: center;\">★: 4.3</p>"; counter++;}
         }
     }
     
