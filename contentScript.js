@@ -48,7 +48,7 @@ for (let i = 0; i < buttons.length; i++) {
     const professorRating = () => {
         for (let element of instructors) {
             console.log(counter + " counter");
-            if (counter < instructors.length){alert(element.innerHTML.match(/> (.*?) </gi)); element.innerHTML = element.innerHTML + "<p style=\"background-color: #6bcc5c;border:5px solid #a7fc9a; border-radius: 10px; color: #a2f2b8; padding: 7px 10px;\">Hi...</p>"; counter++;}
+            if (counter < instructors.length){alert(element.innerHTML.match(/> (.*?) </gi)); element.innerHTML = element.innerHTML + "<p style=\"background-color: #6bcc5c; border: 5px solid #a7fc9a; border-radius: 10px; color: #c6f5d3; max-width: 50px; padding: 7px 10px; text-align: center;\">★: 4.3</p>"; counter++;}
         }
     }
     
