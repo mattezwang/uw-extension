@@ -1,6 +1,7 @@
 var buttons = document.getElementsByClassName("ng-star-inserted");
 var instructors = document.getElementsByClassName("instructor ng-star-inserted");
 var instructorPage = document.getElementsByClassName("ng-tns-c164-1 ng-star-inserted");
+var styleHead = document.head;
 var prevCourseNum = null;
 var counter = 0;
 
