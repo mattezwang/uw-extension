@@ -1,14 +1,20 @@
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+import MySQLdb
 
-uri = "mongodb+srv://accessUser:DARFlJzX4n65d2M2@extensioncluster.p8dfyxr.mongodb.net/?retryWrites=true&w=majority"
+connection = MySQLdb.connect(
+    host="gateway01.us-west-2.prod.aws.tidbcloud.com",
+    port=43935,
+    user="42yppRwczsvpiU9.root",
+    password="JbuQyGMJOzzm1VLj",
+    database="ExtensionDatabase",
+    ssl_mode="VERIFY_IDENTITY",
+    ssl={
+      "ca": "/etc/ssl/cert.pem"
+      }
+    )
 
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
+with connection:
+  with connection.cursor() as cursor:
+    cursor.execute("SELECT DATABASE();")
+    m = cursor.fetchone()
+    print(m[0])
+    
