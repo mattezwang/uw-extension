@@ -3,9 +3,4 @@ This is a Google Extension WIP; When completed, it should utilize Madgrades and 
 
 TODO: 
 
-FIGURE OUT THE ISSUE WHERE THE CONTENT ONLY UPDATES WHEN YOU ACCIDENTALLY BACK OUT OF THE PAGE
-manually update whenever click? will look into this
-
-DOM needs to change when the page is the same
-
-find out how to do the madgrades extractor thing (give up on the madgrades web scrape thing)
+issue with the prof rating thing, it only shows up once and if you back out and click on "see sections" again it doesnt work, and if you go to other classes now it doesnt alert for more than one professor
