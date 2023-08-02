@@ -40,9 +40,9 @@ function courseSelected () {
 
     const observer = new MutationObserver((mutations) => {
         if (mutations[0].attributeName === 'class') {
-          console.log('class change seen');
-          counter = 0;
+            console.log('class change seen');
+            counter = 0;
         }
         buttonListener();
-      })
+    })
         .observe(mainDoc, { attributes: true });
