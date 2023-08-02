@@ -18,9 +18,5 @@ with connection:
   with connection.cursor() as cursor:
     cursor.execute("SELECT MAX(((a_count * 4) + (ab_count * 3.5) + (b_count * 3) + (bc_count * 2.5) + (c_count * 2) + (d_count * 1) + (f_count * 0))/(a_count + ab_count + b_count + bc_count + c_count + d_count + f_count)) FROM `grade_distributions` JOIN `course_offerings` ON `grade_distributions`.`course_offering_uuid` = `course_offerings`.`uuid` WHERE course_offerings.name = \'" + courseName + "\'")
     m = cursor.fetchone()
-<<<<<<< HEAD
-    print(m[0])
-=======
     print(m[0])
     
->>>>>>> 5041744f97accabf51a346a2a28cdae8eb381820
