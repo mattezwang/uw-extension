@@ -3,6 +3,7 @@ var instructorPage = document.getElementsByClassName("ng-tns-c164-1 ng-star-inse
 var mainDoc = document.querySelector("mat-sidenav-container");
 var prevCourseNum = null;
 var counter = 0;
+var name = "Amogh-Sama";
 
 function buttonListener () {
     mainDoc.addEventListener("click", () => {
@@ -31,6 +32,7 @@ function courseSelected () {
             if (counter < instructors.length){
                 for (const profName of profNameParse){
                     console.log(profName[1]);
+                    // name = profName[1];
                 }
                 professor_list = JSON.stringify(profNameParse);
                 element.innerHTML = element.innerHTML + "<p style=\"background-color: #6bcc5c; border: 5px solid #a7fc9a; border-radius: 10px; color: #c6f5d3; max-width: 50px; padding: 7px 10px; text-align: center;\">★: 4.3</p>"; 
@@ -45,7 +47,6 @@ function courseSelected () {
     //     .done(function(data) {
     //         console.log("Data Loaded: " + data)
     //     });
-
 
     const observer = new MutationObserver((mutations) => {
         if (mutations[0].attributeName === 'class') {
