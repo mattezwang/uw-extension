@@ -32,11 +32,20 @@ function courseSelected () {
                 for (const profName of profNameParse){
                     console.log(profName[1]);
                 }
+                professor_list = JSON.stringify(profNameParse);
                 element.innerHTML = element.innerHTML + "<p style=\"background-color: #6bcc5c; border: 5px solid #a7fc9a; border-radius: 10px; color: #c6f5d3; max-width: 50px; padding: 7px 10px; text-align: center;\">★: 4.3</p>"; 
                 counter++;
             }
         }
     }
+
+    
+    //AJAX Function to send the professor data
+    // var RMP = $.post("RMP.py", profNameParse)
+    //     .done(function(data) {
+    //         console.log("Data Loaded: " + data)
+    //     });
+
 
     const observer = new MutationObserver((mutations) => {
         if (mutations[0].attributeName === 'class') {
