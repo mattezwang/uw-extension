@@ -3,7 +3,7 @@ var instructorPage = document.getElementsByClassName("ng-tns-c164-1 ng-star-inse
 var mainDoc = document.querySelector("mat-sidenav-container");
 var prevCourseNum = null;
 var counter = 0;
-var name = "Amogh-Sama";
+var courseTitleGlobal = "";
 
 function buttonListener () {
     mainDoc.addEventListener("click", () => {
@@ -18,7 +18,10 @@ function courseSelected () {
         //Getting the course title
         var courseTitle = document.getElementsByClassName("course-title")[0];
         var catalogRef = document.getElementsByClassName("catalog-ref")[0];
-        if (courseTitle) { courseTitle = courseTitle.innerHTML; }
+        if (courseTitle) {
+            courseTitle = courseTitle.innerHTML;
+            courseTitleGlobal = courseTitle;
+        }
         if (catalogRef) { catalogRef = catalogRef.innerHTML; }
         prevCourseNum = courseNum;
     }
@@ -40,13 +43,6 @@ function courseSelected () {
             }
         }
     }
-
-    
-    //AJAX Function to send the professor data
-    // var RMP = $.post("RMP.py", profNameParse)
-    //     .done(function(data) {
-    //         console.log("Data Loaded: " + data)
-    //     });
 
     const observer = new MutationObserver((mutations) => {
         if (mutations[0].attributeName === 'class') {
