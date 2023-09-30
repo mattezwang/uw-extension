@@ -4,6 +4,7 @@ var mainDoc = document.querySelector("mat-sidenav-container");
 var prevCourseNum = null;
 var counter = 0;
 var courseTitleGlobal = "";
+var professorListGlobal = null;
 
 function buttonListener () {
     mainDoc.addEventListener("click", () => {
@@ -38,6 +39,7 @@ function courseSelected () {
                     // name = profName[1];
                 }
                 professor_list = JSON.stringify(profNameParse);
+                professorListGlobal = professor_list;
                 element.innerHTML = element.innerHTML + "<p style=\"background-color: #6bcc5c; border: 5px solid #a7fc9a; border-radius: 10px; color: #c6f5d3; max-width: 50px; padding: 7px 10px; text-align: center;\">★: 4.3</p>"; 
                 counter++;
             }
@@ -52,3 +54,10 @@ function courseSelected () {
         buttonListener();
     })
         .observe(mainDoc, { attributes: true });
+
+    var obj;
+
+    fetch('/', {
+        professor_list: professorListGlobal,
+        course: courseTitleGlobal
+    })
