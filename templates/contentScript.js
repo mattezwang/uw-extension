@@ -2,18 +2,28 @@ var instructors = document.getElementsByClassName("instructor ng-star-inserted")
 var instructorPage = document.getElementsByClassName("ng-tns-c164-1 ng-star-inserted");
 var mainDoc = document.querySelector("mat-sidenav-container");
 var prevCourseNum = null;
-var counter = 0;
+let counter = 0;
 var courseTitleGlobal = "";
 var professorListGlobal = null;
 
 function buttonListener () {
+
+    const startTime = performance.now();
+
     mainDoc.addEventListener("click", () => {
         courseSelected();
         professorRating();
     });
+
+    const duration = performance.now() - startTime;
+    console.log(`buttonListener took ${duration}ms`);
+
 }
 
 function courseSelected () {
+
+    const startTime = performance.now();
+
     var courseNum = document.getElementsByClassName("catalog-ref")[0]
     if (courseNum != prevCourseNum) {
         //Getting the course title
@@ -26,10 +36,17 @@ function courseSelected () {
         if (catalogRef) { catalogRef = catalogRef.innerHTML; }
         prevCourseNum = courseNum;
     }
+
+    const duration = performance.now() - startTime;
+    console.log(`startTime took ${duration}ms`);
+
 }
 
     //Getting the professors
     const professorRating = () => {
+
+        const startTime = performance.now();
+
         for (let element of instructors) {
             console.log(counter + " counter, instructors.length = " + instructors.length);
             let profNameParse = element.innerHTML.matchAll(/> (.*) </gmi);
@@ -44,9 +61,15 @@ function courseSelected () {
                 counter++;
             }
         }
+
+        const duration = performance.now() - startTime;
+        console.log(`professorRating took ${duration}ms`);
+
     }
 
     const observer = new MutationObserver((mutations) => {
+
+
         if (mutations[0].attributeName === 'class') {
             console.log('class change seen');
             counter = 0;

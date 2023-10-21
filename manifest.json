@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Providing Madgrades and RateMyProfessor data on UW-Madison's Course Search",
   "permissions": ["storage", "tabs", "scripting"],
-  "host_permissions": ["https://enroll.wisc.edu/*"],
+  "host_permissions": ["https://enroll.wisc.edu/*","http://127.0.0.1.*","http://localhost.*"],
   "background": {
       "service_worker": "background.py"
   },
